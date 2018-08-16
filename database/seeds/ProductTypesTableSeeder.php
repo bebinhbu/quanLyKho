@@ -13,7 +13,7 @@ class ProductTypesTableSeeder extends Seeder
     {
         $faker = Faker::create();
         DB::table('product_types')->insert([
-            
+           'name'=>''
         ]);
     }
 }
