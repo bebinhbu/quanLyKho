@@ -12,13 +12,27 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.dcjqaccordion.2.7.js') }}"></script>
+    <script src="{{ asset('js/jquery.scrollTo.min.js') }}"></script>
+    <script src="{{ asset('js/respond.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.nicescroll.js') }}"></script>
+    <script src="{{ asset('js/slidebars.min.js') }}"></script>
+    <script src="{{ asset('js/common-scripts.js') }}"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ asset('public/assets/font-awesome/css/font-awesome.css') }}">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/table-responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/slidebars.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style-responsive.css') }}">
 </head>
 <body>
     <div id="app">
