@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Faker\Factory as Faker;
 class ProductTypesTableSeeder extends Seeder
 {
     /**
@@ -11,9 +10,9 @@ class ProductTypesTableSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create();
         DB::table('product_types')->insert([
-           'name'=>''
+            ['name'=>'Đồ ăn','description'=>'Đồ ăn để người ăn','active_flg'=>'1'],
+            ['name'=>'Thức uống','description'=>'Nước để người uống','active_flg'=>'1']
         ]);
     }
 }
