@@ -22,4 +22,5 @@ Route::middleware('auth')->group(function(){
     Route::post('/insertEmployee','EmployeeController@insert')->name('insertEmployee');
     Route::post('/updateEmployee','EmployeeController@update')->name('updateEmployee');
     Route::get('/deleteEmployee/{id}','EmployeeController@delete')->name('deleteEmployee');
+    Route::post('/deleteEmployeeChecked','EmployeeController@deleteChecked')->name('deleteEmployeeChecked');
 });

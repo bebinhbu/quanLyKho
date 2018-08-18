@@ -44,6 +44,11 @@
                             <table class="table table-striped table-hover table-bordered" id="editable-sample">
                                 <thead>
                                 <tr>
+                                    <th>
+                                        <button type="submit" name="bulk_delete" id="bulk_delete" data-url="{{route('deleteEmployeeChecked')}}" class="btn btn-danger btn-xs">
+                                            <i class="fa fa-eraser"></i>
+                                        </button>
+                                    </th>
                                     <th>ID</th>
                                     <th>Full Name</th>
                                     <th>Sex</th>
@@ -56,6 +61,9 @@
                                 <tbody>
                                 @foreach($lists as $value)
                                     <tr>
+                                        <td>
+                                            <input type="checkbox" name="checkList[]" class="checkboxes" value="{{ $value->id }}" />
+                                        </td>
                                         <td class="id_emp">{{ $value->id }}</td>
                                         <td><input type="text" class="name_emp" value="{{ $value->name }}"></td>
                                         <td>
@@ -107,7 +115,7 @@
                                     <div class="col-lg-9">
                                         <div class="iconic-input right">
                                             <i class="fa fa-users"></i>
-                                            <input type="text" class="form-control" placeholder="Full name" name="name"
+                                            <input type="text" class="form-control" placeholder="Full name" value="{{old('name')}}" name="name"
                                                    id="name" required>
                                         </div>
                                     </div>
@@ -116,8 +124,8 @@
                                     <label class="col-lg-3 col-sm-3 control-label">Sex</label>
                                     <div class="col-lg-9">
                                         <select class="form-control m-bot15" name="sex">
-                                            <option value="0">Male</option>
-                                            <option value="1">Female</option>
+                                            <option value="0" {{ (old('sex') == 0 ? 'selected' : '') }}>Male</option>
+                                            <option value="1" {{ (old('sex') == 1 ? 'selected' : '') }}>Female</option>
                                         </select>
                                     </div>
                                 </div>
@@ -126,7 +134,7 @@
                                     <div class="col-lg-9">
                                         <div class="iconic-input right">
                                             <i class="fa fa-envelope"></i>
-                                            <input type="email" class="form-control" name="email" id="email"
+                                            <input type="email" class="form-control" value=" {{old('email') }}" name="email" id="email"
                                                    placeholder="Email" required>
                                         </div>
                                     </div>
@@ -136,7 +144,7 @@
                                     <div class="col-lg-9">
                                         <div class="iconic-input right">
                                             <i class="fa fa-phone"></i>
-                                            <input type="number" class="form-control" name="phone" id="phone"
+                                            <input type="number" class="form-control" value="{{ old('phone') }}" name="phone" id="phone"
                                                    placeholder="Phone" required>
                                         </div>
                                     </div>

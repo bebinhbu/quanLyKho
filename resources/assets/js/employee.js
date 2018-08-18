@@ -36,7 +36,7 @@ $(document).ready(function () {
                     // alert('Update Employee Fail !' + data.errors);
                     $.alert({
                         title: '<h2 style="color:red;font-weight: bold">Fail!</h2>',
-                        content: 'Update Employee Fail because' + data.errors()
+                        content: 'Update Employee Fail because' + data.errors
                     });
                 }
             },
@@ -54,6 +54,44 @@ $(document).ready(function () {
             buttons: {
                 OK: function(){
                     location.href = $(_this).attr('href');
+                },
+                Cancel :function()
+                {
+
+                }
+            }
+        });
+        return false;
+    })
+    $('#bulk_delete').click(function(){
+        var id=[];
+        $.confirm({
+            title: 'Delete!',
+            content: 'Are you sure delete it!',
+            buttons: {
+                OK: function(){
+                    $('.checkboxes:checked').each(function(){
+                        id.push($(this).val());
+                    });
+                    var postData = {
+                        '_token': $('meta[name="csrf-token"]').attr('content'),
+                        'id' : id
+                    }
+                    if(id.length > 0)
+                    {
+                        $.ajax({
+                            url: $("#bulk_delete").attr('data-url'),
+                            method: "POST",
+                            data:postData,
+                            success:function(data){
+                                if(data.success)
+                                {
+                                    window.location.reload();
+                                }
+                            }
+                        });
+
+                    }
                 },
                 Cancel :function()
                 {

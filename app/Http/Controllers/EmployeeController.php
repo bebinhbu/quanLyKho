@@ -45,6 +45,7 @@ class EmployeeController extends Controller
         $rule = $employeePost->rules();
         unset($rule['name']);
         unset($rule['email']);
+        $rule = ['email'=>'required|email'];
         $validator = Validator::make($request->all(),$rule);
         $id = $request->get('id');
         $name = $request->get('name');
@@ -74,5 +75,18 @@ class EmployeeController extends Controller
         $employee->save();
         session()->flash('success','Deleted Successfully !');
         return redirect()->route('showAllEmployee');
+    }
+    public function deleteChecked(Request $request){
+        $employee_id_array = $request->get('id');
+        $employee = Employee::query()->whereIn('id',$employee_id_array)->get();
+        if(!empty($employee)) {
+            foreach($employee as $value) {
+                $value->active_flg = 0;
+                $value->save();
+            }
+        }
+        return response()->json([
+            'success' => true
+        ]);
     }
 }

@@ -26,7 +26,7 @@ class EmployeeRequest extends FormRequest
         return [
             'name' => 'required|unique:employees|max:100',
             'email' => 'required|email|unique:employees,email',
-            'phone' => 'required|numeric'
+            'phone' => 'required|numeric|digits_between:10,15'
         ];
     }
 }

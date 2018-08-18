@@ -60,21 +60,19 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 10:
+/******/ ([
+/* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(11);
-module.exports = __webpack_require__(37);
+__webpack_require__(1);
+module.exports = __webpack_require__(3);
 
 
 /***/ }),
-
-/***/ 11:
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -83,7 +81,7 @@ module.exports = __webpack_require__(37);
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-__webpack_require__(36);
+__webpack_require__(2);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -92,8 +90,7 @@ __webpack_require__(36);
  */
 
 /***/ }),
-
-/***/ 36:
+/* 2 */
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
@@ -133,7 +130,7 @@ $(document).ready(function () {
                     // alert('Update Employee Fail !' + data.errors);
                     $.alert({
                         title: '<h2 style="color:red;font-weight: bold">Fail!</h2>',
-                        content: 'Update Employee Fail because' + data.errors()
+                        content: 'Update Employee Fail because' + data.errors
                     });
                 }
             },
@@ -157,15 +154,45 @@ $(document).ready(function () {
         });
         return false;
     });
+    $('#bulk_delete').click(function () {
+        var id = [];
+        $.confirm({
+            title: 'Delete!',
+            content: 'Are you sure delete it!',
+            buttons: {
+                OK: function OK() {
+                    $('.checkboxes:checked').each(function () {
+                        id.push($(this).val());
+                    });
+                    var postData = {
+                        '_token': $('meta[name="csrf-token"]').attr('content'),
+                        'id': id
+                    };
+                    if (id.length > 0) {
+                        $.ajax({
+                            url: $("#bulk_delete").attr('data-url'),
+                            method: "POST",
+                            data: postData,
+                            success: function success(data) {
+                                if (data.success) {
+                                    window.location.reload();
+                                }
+                            }
+                        });
+                    }
+                },
+                Cancel: function Cancel() {}
+            }
+        });
+        return false;
+    });
 });
 
 /***/ }),
-
-/***/ 37:
+/* 3 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ })
-
-/******/ });
+/******/ ]);
