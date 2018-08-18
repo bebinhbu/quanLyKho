@@ -131,7 +131,11 @@ a:hover {
     text-align: left;
 }
 
-input, textarea, select, button {
+input, textarea, select {
+    outline: none !important;
+    width:100%;
+}
+button {
     outline: none !important;
 }
 

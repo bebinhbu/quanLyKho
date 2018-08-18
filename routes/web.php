@@ -16,5 +16,10 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware('auth')->group(function(){
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/showAllEmployee','EmployeeController@showAllEmployee')->name('showAllEmployee');
+    Route::post('/insertEmployee','EmployeeController@insert')->name('insertEmployee');
+    Route::post('/updateEmployee','EmployeeController@update')->name('updateEmployee');
+    Route::get('/deleteEmployee/{id}','EmployeeController@delete')->name('deleteEmployee');
+});
