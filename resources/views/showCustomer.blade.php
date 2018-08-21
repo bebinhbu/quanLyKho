@@ -101,7 +101,7 @@
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
                             </button>
-                            <h4 class="modal-title">Insert Employee New</h4>
+                            <h4 class="modal-title">Insert Cusomter New</h4>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
@@ -115,22 +115,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-lg-3 col-sm-3 control-label">Sex</label>
+                                <label class="col-lg-3 col-sm-3 control-label">Address</label>
                                 <div class="col-lg-9">
-                                    <select class="form-control m-bot15" name="sex">
-                                        <option value="0" {{ (old('sex') == 0 ? 'selected' : '') }}>Male</option>
-                                        <option value="1" {{ (old('sex') == 1 ? 'selected' : '') }}>Female</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-lg-3 col-sm-3 control-label">Email</label>
-                                <div class="col-lg-9">
-                                    <div class="iconic-input right">
-                                        <i class="fa fa-envelope"></i>
-                                        <input type="email" class="form-control" value=" {{old('email') }}" name="email" id="email"
-                                               placeholder="Email" required>
-                                    </div>
+                                    <textarea class="form-control" name="address" required>{{ old('address') }}</textarea>
                                 </div>
                             </div>
                             <div class="form-group">
