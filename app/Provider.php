@@ -12,6 +12,6 @@ class Provider extends Model
     }
     public static function findProviderByID($id)
     {
-        return self::query()->where('id','id')->first();
+        return self::query()->where('id',$id)->first();
     }
 }

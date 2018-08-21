@@ -96,7 +96,7 @@
             <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
         </div>
         <!--logo start-->
-        <a href="index.html" class="logo">Manager<span> Project</span></a>
+        <a href="index.html" class="logo">Manager<span> Warehouse</span></a>
         <!--logo end-->
         <div class="top-nav ">
             <!--search & user info start-->
@@ -152,10 +152,7 @@
                     <ul class="sub">
                         <li><a  href="{{ route('showAllEmployee') }}">Employees</a></li>
                         <li><a  href="{{ route('showAllProvider') }}">Providers</a></li>
-                        <li><a  href="header-color.html">Different Color Top bar</a></li>
-                        <li><a  href="mega_menu.html">Mega Menu</a></li>
-                        <li><a  href="language_switch_bar.html">Language Switch Bar</a></li>
-                        <li><a  href="email_template.html" target="_blank">Email Template</a></li>
+                        <li><a  href="{{ route('showAllCustomer') }}">Customers</a></li>
                     </ul>
                 </li>
             </ul>
@@ -166,7 +163,7 @@
     <!--footer start-->
     <footer class="site-footer">
         <div class="text-center">
-            2013 &copy; FlatLab by VectorLab.
+            Manager Project By BinhBu.
             <a href="#" class="go-top">
                 <i class="fa fa-angle-up"></i>
             </a>

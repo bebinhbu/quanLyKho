@@ -1,11 +1,11 @@
 @extends('layouts.app')
 @section('content')
-    <section id="main-content" class="providerPage">
+    <section id="main-content" class="employeePage">
         <section class="wrapper site-min-height">
             <!-- page start-->
             <section class="panel">
                 <header class="panel-heading">
-                    <h2 class="text-center">Providers</h2>
+                    <h2 class="text-center">Customers</h2>
                 </header>
                 @if(Session::has('success'))
                     <div class="alert alert-block alert-info fade in">
@@ -45,12 +45,12 @@
                             <thead>
                             <tr>
                                 <th>
-                                    <button type="submit" name="bulk_delete" id="bulk_delete" data-url="{{route('deleteProviderChecked')}}" class="btn btn-danger btn-xs">
+                                    <button type="submit" name="bulk_delete" id="bulk_delete" data-url="{{route('deleteEmployeeChecked')}}" class="btn btn-danger btn-xs">
                                         <i class="fa fa-eraser"></i>
                                     </button>
                                 </th>
                                 <th>ID</th>
-                                <th>Name</th>
+                                <th>Full Name</th>
                                 <th>Address</th>
                                 <th>Phone</th>
                                 <th>Edit</th>
@@ -63,21 +63,21 @@
                                     <td>
                                         <input type="checkbox" name="checkList[]" class="checkboxes" value="{{ $value->id }}" />
                                     </td>
-                                    <td class="id_pro">{{ $value->id }}</td>
-                                    <td><input type="text" class="name_pro" value="{{ $value->name }}"></td>
-                                    <td>
-                                        <textarea class="address_pro"> {{$value->address}} </textarea>
+                                    <td class="id_emp">{{ $value->id }}</td>
+                                    <td><input type="text" class="name_emp" value="{{ $value->name }}"></td>
+                                    <td class="center">
+                                        <textarea>{{$value->address}}</textarea>
                                     </td>
-                                    <td class="center"><input type="string" class="phone_pro"
+                                    <td class="center"><input type="string" class="phone_emp"
                                                               value="{{ $value->phone }}"></td>
                                     <td>
-                                        <a class="btn btn-sm btn-info btnEditPro"
-                                           data-url="{{route('updateProvider')}}">
+                                        <a class="btn btn-sm btn-info btnEditEmp"
+                                           data-url="{{ route('updateEmployee') }}">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-sm btn-danger btnDeletePro" href="{{route('deleteProvider',['id'=>$value->id])}})}}">
+                                        <a class="btn btn-sm btn-danger btnDeleteEmp" href="{{route('deleteEmployee',['id'=>$value->id])}}">
                                             <i class="fa fa-minus"></i>
                                         </a>
                                     </td>
@@ -96,16 +96,16 @@
         <div class="modal-dialog ">
             <div class="modal-content-wrap">
                 <div class="modal-content">
-                    <form class="form-horizontal" action="{{ route('insertProvider') }}" method="POST" role="form">
+                    <form class="form-horizontal" action="{{route('insertEmployee')}}" method="POST" role="form">
                         {{csrf_field()}}
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
                             </button>
-                            <h4 class="modal-title">Insert Provider New</h4>
+                            <h4 class="modal-title">Insert Employee New</h4>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label class="col-lg-3 col-sm-3 control-label">Name</label>
+                                <label class="col-lg-3 col-sm-3 control-label">Full name</label>
                                 <div class="col-lg-9">
                                     <div class="iconic-input right">
                                         <i class="fa fa-users"></i>
@@ -115,9 +115,22 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-lg-3 col-sm-3 control-label">Address</label>
+                                <label class="col-lg-3 col-sm-3 control-label">Sex</label>
                                 <div class="col-lg-9">
-                                    <textarea name="address" class="form-control" required>{{old('address')}}</textarea>
+                                    <select class="form-control m-bot15" name="sex">
+                                        <option value="0" {{ (old('sex') == 0 ? 'selected' : '') }}>Male</option>
+                                        <option value="1" {{ (old('sex') == 1 ? 'selected' : '') }}>Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 col-sm-3 control-label">Email</label>
+                                <div class="col-lg-9">
+                                    <div class="iconic-input right">
+                                        <i class="fa fa-envelope"></i>
+                                        <input type="email" class="form-control" value=" {{old('email') }}" name="email" id="email"
+                                               placeholder="Email" required>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">

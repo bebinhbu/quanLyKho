@@ -50,10 +50,10 @@ class ProviderController extends Controller
         $success = true;
         $provider = Provider::findProviderByID($id);
         if(!$validator->fails()){
-            $provider->name = $name;
-            $provider->address = $address;
-            $provider->phone = $phone;
-            $provider->save();
+            $provider -> name = $name;
+            $provider -> address = $address;
+            $provider -> phone = $phone;
+            $provider -> save();
             return response()->json([
                 'success' => $success
             ]);
@@ -63,4 +63,25 @@ class ProviderController extends Controller
             'errors' => $validator->errors()->all()
         ]);
     }
+    public function delete($id) {
+        $provider = Provider::findProviderByID($id);
+        $provider->active_flg = 0 ;
+        $provider->save();
+        session()->flash('success','Deleted Successfully !');
+        return redirect()->route('showAllProvider');
+    }
+    public function deleteChecked(Request $request){
+        $provider_id_array = $request->get('id');
+        $provider = Provider::query()->whereIn('id',$provider_id_array)->get();
+        if(!empty($provider)) {
+            foreach($provider as $value) {
+                $value->active_flg = 0;
+                $value->save();
+            }
+        }
+        return response()->json([
+            'success' => true
+        ]);
+    }
+
 }

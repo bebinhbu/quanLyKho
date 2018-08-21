@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-        <section id="main-content">
+        <section id="main-content" class="employeePage">
             <section class="wrapper site-min-height">
                 <!-- page start-->
                 <section class="panel">
