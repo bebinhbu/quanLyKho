@@ -8,7 +8,7 @@ class Provider extends Model
 {
     public static function showAllProvider()
     {
-        return self::query()->where('active_flg',1)->orderBy('id','desc')->get();
+        return self::query()->where('active_flg',1)->orderBy('id','asc')->get();
     }
     public static function findProviderByID($id)
     {

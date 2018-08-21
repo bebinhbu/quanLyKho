@@ -24,7 +24,9 @@ class CustomerRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|unique:customers|max:100',
+            'address' => 'required|max:255',
+            'phone' => 'required|numeric|digits_between:10,15'
         ];
     }
 }

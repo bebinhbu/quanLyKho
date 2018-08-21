@@ -6218,3 +6218,7 @@ header.blue-bg .search:focus {
 #editable-sample thead tr th {
     background: #41cac0;
 }
+#remember {
+    display: inline-block;
+    width: 25px;
+}

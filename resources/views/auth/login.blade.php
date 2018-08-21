@@ -18,7 +18,6 @@
     <link href="{{asset('css/style-responsive.css')}}" rel="stylesheet"/>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
-    <script src="{{ asset('js/html5shiv.js') }}"></script>
     <script src="{{asset('js/respond.min.js')}}"></script>
 </head>
 <body class="login-body">

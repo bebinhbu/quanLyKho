@@ -68,7 +68,7 @@
                                     <td>
                                         <textarea class="address_pro"> {{$value->address}} </textarea>
                                     </td>
-                                    <td class="center"><input type="string" class="phone_pro"
+                                    <td class="center"><input type="text" class="phone_pro"
                                                               value="{{ $value->phone }}"></td>
                                     <td>
                                         <a class="btn btn-sm btn-info btnEditPro"

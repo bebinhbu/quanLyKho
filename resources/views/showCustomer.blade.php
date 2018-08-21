@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <section id="main-content" class="employeePage">
+    <section id="main-content" class="customerPage">
         <section class="wrapper site-min-height">
             <!-- page start-->
             <section class="panel">
@@ -45,7 +45,7 @@
                             <thead>
                             <tr>
                                 <th>
-                                    <button type="submit" name="bulk_delete" id="bulk_delete" data-url="{{route('deleteEmployeeChecked')}}" class="btn btn-danger btn-xs">
+                                    <button type="submit" name="bulk_delete" id="bulk_delete" data-url="{{route('deleteCustomerChecked')}}" class="btn btn-danger btn-xs">
                                         <i class="fa fa-eraser"></i>
                                     </button>
                                 </th>
@@ -63,21 +63,21 @@
                                     <td>
                                         <input type="checkbox" name="checkList[]" class="checkboxes" value="{{ $value->id }}" />
                                     </td>
-                                    <td class="id_emp">{{ $value->id }}</td>
-                                    <td><input type="text" class="name_emp" value="{{ $value->name }}"></td>
+                                    <td class="id_cus">{{ $value->id }}</td>
+                                    <td><input type="text" class="name_cus" value="{{ $value->name }}"></td>
                                     <td class="center">
-                                        <textarea>{{$value->address}}</textarea>
+                                        <textarea class="address_cus">{{$value->address}}</textarea>
                                     </td>
-                                    <td class="center"><input type="string" class="phone_emp"
+                                    <td class="center"><input type="text" class="phone_cus"
                                                               value="{{ $value->phone }}"></td>
                                     <td>
-                                        <a class="btn btn-sm btn-info btnEditEmp"
-                                           data-url="{{ route('updateEmployee') }}">
+                                        <a class="btn btn-sm btn-info btnEditCus"
+                                           data-url="{{ route('updateCustomer') }}">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-sm btn-danger btnDeleteEmp" href="{{route('deleteEmployee',['id'=>$value->id])}}">
+                                        <a class="btn btn-sm btn-danger btnDeleteCus" href="{{route('deleteCustomer',['id'=>$value->id])}}">
                                             <i class="fa fa-minus"></i>
                                         </a>
                                     </td>
@@ -96,7 +96,7 @@
         <div class="modal-dialog ">
             <div class="modal-content-wrap">
                 <div class="modal-content">
-                    <form class="form-horizontal" action="{{route('insertEmployee')}}" method="POST" role="form">
+                    <form class="form-horizontal" action="{{route('insertCustomer')}}" method="POST" role="form">
                         {{csrf_field()}}
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;

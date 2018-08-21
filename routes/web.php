@@ -35,4 +35,8 @@ Route::middleware('auth')->group(function(){
 
     //customer
     Route::get('/showAllCustomer','CustomerController@showAllCustomer')->name('showAllCustomer');
+    Route::post('/insertCustomer','CustomerController@insert')->name('insertCustomer');
+    Route::post('/updateCustomer','CustomerController@update')->name('updateCustomer');
+    Route::get('/deleteCustomer/{id}','CustomerController@delete')->name('deleteCustomer');
+    Route::post('/deleteCustomerChecked','CustomerController@deleteChecked')->name('deleteCustomerChecked');
 });
