@@ -19,7 +19,7 @@ class EmployeesTableSeeder extends Seeder
                 'sex' => ($i % 2 == 0) ? '1' : '0',
                 'email' => $faker->freeEmail,
                 'active_flg' => '1',
-                'phone' => $faker->phoneNumber
+                'phone' => $faker->e164PhoneNumber
             ]);
         }
     }

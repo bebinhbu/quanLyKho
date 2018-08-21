@@ -17,10 +17,15 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::middleware('auth')->group(function(){
+
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/showAllEmployee','EmployeeController@showAllEmployee')->name('showAllEmployee');
     Route::post('/insertEmployee','EmployeeController@insert')->name('insertEmployee');
     Route::post('/updateEmployee','EmployeeController@update')->name('updateEmployee');
     Route::get('/deleteEmployee/{id}','EmployeeController@delete')->name('deleteEmployee');
     Route::post('/deleteEmployeeChecked','EmployeeController@deleteChecked')->name('deleteEmployeeChecked');
+
+    Route::get('/showAllProvider','ProviderController@showAllProvider')->name('showAllProvider');
+    Route::post('/insertProvider','ProviderController@insert')->name('insertProvider');
+    Route::post('/updateProvider','ProviderController@update')->name('updateProvider');
 });

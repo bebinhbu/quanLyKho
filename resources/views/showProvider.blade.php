@@ -1,462 +1,153 @@
 @extends('layouts.app')
 @section('content')
     <section id="main-content">
-        <section class="wrapper">
+        <section class="wrapper site-min-height">
             <!-- page start-->
-            <div class="row">
-                <div class="col-lg-12">
-                    <section class="panel">
-                        <header class="panel-heading">
-                            Responsive table
-                        </header>
-                        <div class="panel-body">
-                            <section id="unseen">
-                                <table class="table table-bordered table-striped table-condensed">
-                                    <thead>
-                                    <tr>
-                                        <th>Code</th>
-                                        <th>Company</th>
-                                        <th class="numeric">Price</th>
-                                        <th class="numeric">Change</th>
-                                        <th class="numeric">Change %</th>
-                                        <th class="numeric">Open</th>
-                                        <th class="numeric">High</th>
-                                        <th class="numeric">Low</th>
-                                        <th class="numeric">Volume</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>AAC</td>
-                                        <td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-                                        <td class="numeric">$1.38</td>
-                                        <td class="numeric">-0.01</td>
-                                        <td class="numeric">-0.36%</td>
-                                        <td class="numeric">$1.39</td>
-                                        <td class="numeric">$1.39</td>
-                                        <td class="numeric">$1.38</td>
-                                        <td class="numeric">9,395</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AAD</td>
-                                        <td>ARDENT LEISURE GROUP</td>
-                                        <td class="numeric">$1.15</td>
-                                        <td class="numeric">  +0.02</td>
-                                        <td class="numeric">1.32%</td>
-                                        <td class="numeric">$1.14</td>
-                                        <td class="numeric">$1.15</td>
-                                        <td class="numeric">$1.13</td>
-                                        <td class="numeric">56,431</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AAX</td>
-                                        <td>AUSENCO LIMITED</td>
-                                        <td class="numeric">$4.00</td>
-                                        <td class="numeric">-0.04</td>
-                                        <td class="numeric">-0.99%</td>
-                                        <td class="numeric">$4.01</td>
-                                        <td class="numeric">$4.05</td>
-                                        <td class="numeric">$4.00</td>
-                                        <td class="numeric">90,641</td>
-                                    </tr>
-                                    <tr>
-                                        <td>ABC</td>
-                                        <td>ADELAIDE BRIGHTON LIMITED</td>
-                                        <td class="numeric">$3.00</td>
-                                        <td class="numeric">  +0.06</td>
-                                        <td class="numeric">2.04%</td>
-                                        <td class="numeric">$2.98</td>
-                                        <td class="numeric">$3.00</td>
-                                        <td class="numeric">$2.96</td>
-                                        <td class="numeric">862,518</td>
-                                    </tr>
-                                    <tr>
-                                        <td>ABP</td>
-                                        <td>ABACUS PROPERTY GROUP</td>
-                                        <td class="numeric">$1.91</td>
-                                        <td class="numeric">0.00</td>
-                                        <td class="numeric">0.00%</td>
-                                        <td class="numeric">$1.92</td>
-                                        <td class="numeric">$1.93</td>
-                                        <td class="numeric">$1.90</td>
-                                        <td class="numeric">595,701</td>
-                                    </tr>
-                                    <tr>
-                                        <td>ABY</td>
-                                        <td>ADITYA BIRLA MINERALS LIMITED</td>
-                                        <td class="numeric">$0.77</td>
-                                        <td class="numeric">  +0.02</td>
-                                        <td class="numeric">2.00%</td>
-                                        <td class="numeric">$0.76</td>
-                                        <td class="numeric">$0.77</td>
-                                        <td class="numeric">$0.76</td>
-                                        <td class="numeric">54,567</td>
-                                    </tr>
-                                    <tr>
-                                        <td>ACR</td>
-                                        <td>ACRUX LIMITED</td>
-                                        <td class="numeric">$3.71</td>
-                                        <td class="numeric">  +0.01</td>
-                                        <td class="numeric">0.14%</td>
-                                        <td class="numeric">$3.70</td>
-                                        <td class="numeric">$3.72</td>
-                                        <td class="numeric">$3.68</td>
-                                        <td class="numeric">191,373</td>
-                                    </tr>
-                                    <tr>
-                                        <td>ADU</td>
-                                        <td>ADAMUS RESOURCES LIMITED</td>
-                                        <td class="numeric">$0.72</td>
-                                        <td class="numeric">0.00</td>
-                                        <td class="numeric">0.00%</td>
-                                        <td class="numeric">$0.73</td>
-                                        <td class="numeric">$0.74</td>
-                                        <td class="numeric">$0.72</td>
-                                        <td class="numeric">8,602,291</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AGG</td>
-                                        <td>ANGLOGOLD ASHANTI LIMITED</td>
-                                        <td class="numeric">$7.81</td>
-                                        <td class="numeric">-0.22</td>
-                                        <td class="numeric">-2.74%</td>
-                                        <td class="numeric">$7.82</td>
-                                        <td class="numeric">$7.82</td>
-                                        <td class="numeric">$7.81</td>
-                                        <td class="numeric">148</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AGK</td>
-                                        <td>AGL ENERGY LIMITED</td>
-                                        <td class="numeric">$13.82</td>
-                                        <td class="numeric">  +0.02</td>
-                                        <td class="numeric">0.14%</td>
-                                        <td class="numeric">$13.83</td>
-                                        <td class="numeric">$13.83</td>
-                                        <td class="numeric">$13.67</td>
-                                        <td class="numeric">846,403</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AGO</td>
-                                        <td>ATLAS IRON LIMITED</td>
-                                        <td class="numeric">$3.17</td>
-                                        <td class="numeric">-0.02</td>
-                                        <td class="numeric">-0.47%</td>
-                                        <td class="numeric">$3.11</td>
-                                        <td class="numeric">$3.22</td>
-                                        <td class="numeric">$3.10</td>
-                                        <td class="numeric">5,416,303</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </section>
+            <section class="panel">
+                <header class="panel-heading">
+                    <h2 class="text-center">Providers</h2>
+                </header>
+                @if(Session::has('success'))
+                    <div class="alert alert-block alert-info fade in">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <strong>{{ Session::get('success') }}</strong>
+                    </div>
+                @endif
+                @if ($errors->any())
+                    <div class="alert alert-block alert-danger fade in">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        @foreach($errors->all() as $message)
+                            <strong>{{ $message }}</strong><br>
+                        @endforeach
+                    </div>
+                @endif
+                <div class="panel-body">
+                    <div class="adv-table editable-table ">
+                        <div class="clearfix">
+                            <div class="btn-group">
+                                <a class="btn btn-success" data-toggle="modal" href="#myModal4">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                            </div>
+                            <div class="btn-group pull-right">
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i
+                                            class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="#">Print</a></li>
+                                    <li><a href="#">Save as PDF</a></li>
+                                    <li><a href="#">Export to Excel</a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </section>
+                        <div class="space15"></div>
+                        <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                            <thead>
+                            <tr>
+                                <th>
+                                    <button type="submit" name="bulk_delete" id="bulk_delete" data-url="{{route('deleteEmployeeChecked')}}" class="btn btn-danger btn-xs">
+                                        <i class="fa fa-eraser"></i>
+                                    </button>
+                                </th>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Phone</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($lists as $value)
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="checkList[]" class="checkboxes" value="{{ $value->id }}" />
+                                    </td>
+                                    <td class="id_pro">{{ $value->id }}</td>
+                                    <td><input type="text" class="name_pro" value="{{ $value->name }}"></td>
+                                    <td>
+                                        <textarea class="address_pro"> {{$value->address}} </textarea>
+                                    </td>
+                                    <td class="center"><input type="string" class="phone_pro"
+                                                              value="{{ $value->phone }}"></td>
+                                    <td>
+                                        <a class="btn btn-sm btn-info btnEditPro"
+                                           data-url="{{route('updateProvider')}}">
+                                            <i class="fa fa-edit"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-sm btn-danger btnDeletePro" href="">
+                                            <i class="fa fa-minus"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <section class="panel">
-                        <header class="panel-heading">
-                            Flip Scroll
-                        </header>
-                        <div class="panel-body">
-                            <section id="flip-scroll">
-                                <table class="table table-bordered table-striped table-condensed cf">
-                                    <thead class="cf">
-                                    <tr>
-                                        <th>Code</th>
-                                        <th>Company</th>
-                                        <th class="numeric">Price</th>
-                                        <th class="numeric">Change</th>
-                                        <th class="numeric">Change %</th>
-                                        <th class="numeric">Open</th>
-                                        <th class="numeric">High</th>
-                                        <th class="numeric">Low</th>
-                                        <th class="numeric">Volume</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>AAC</td>
-                                        <td>AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-                                        <td class="numeric">$1.38</td>
-                                        <td class="numeric">-0.01</td>
-                                        <td class="numeric">-0.36%</td>
-                                        <td class="numeric">$1.39</td>
-                                        <td class="numeric">$1.39</td>
-                                        <td class="numeric">$1.38</td>
-                                        <td class="numeric">9,395</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AAD</td>
-                                        <td>ARDENT LEISURE GROUP</td>
-                                        <td class="numeric">$1.15</td>
-                                        <td class="numeric">  +0.02</td>
-                                        <td class="numeric">1.32%</td>
-                                        <td class="numeric">$1.14</td>
-                                        <td class="numeric">$1.15</td>
-                                        <td class="numeric">$1.13</td>
-                                        <td class="numeric">56,431</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AAX</td>
-                                        <td>AUSENCO LIMITED</td>
-                                        <td class="numeric">$4.00</td>
-                                        <td class="numeric">-0.04</td>
-                                        <td class="numeric">-0.99%</td>
-                                        <td class="numeric">$4.01</td>
-                                        <td class="numeric">$4.05</td>
-                                        <td class="numeric">$4.00</td>
-                                        <td class="numeric">90,641</td>
-                                    </tr>
-                                    <tr>
-                                        <td>ABC</td>
-                                        <td>ADELAIDE BRIGHTON LIMITED</td>
-                                        <td class="numeric">$3.00</td>
-                                        <td class="numeric">  +0.06</td>
-                                        <td class="numeric">2.04%</td>
-                                        <td class="numeric">$2.98</td>
-                                        <td class="numeric">$3.00</td>
-                                        <td class="numeric">$2.96</td>
-                                        <td class="numeric">862,518</td>
-                                    </tr>
-                                    <tr>
-                                        <td>ABP</td>
-                                        <td>ABACUS PROPERTY GROUP</td>
-                                        <td class="numeric">$1.91</td>
-                                        <td class="numeric">0.00</td>
-                                        <td class="numeric">0.00%</td>
-                                        <td class="numeric">$1.92</td>
-                                        <td class="numeric">$1.93</td>
-                                        <td class="numeric">$1.90</td>
-                                        <td class="numeric">595,701</td>
-                                    </tr>
-                                    <tr>
-                                        <td>ABY</td>
-                                        <td>ADITYA BIRLA MINERALS LIMITED</td>
-                                        <td class="numeric">$0.77</td>
-                                        <td class="numeric">  +0.02</td>
-                                        <td class="numeric">2.00%</td>
-                                        <td class="numeric">$0.76</td>
-                                        <td class="numeric">$0.77</td>
-                                        <td class="numeric">$0.76</td>
-                                        <td class="numeric">54,567</td>
-                                    </tr>
-                                    <tr>
-                                        <td>ACR</td>
-                                        <td>ACRUX LIMITED</td>
-                                        <td class="numeric">$3.71</td>
-                                        <td class="numeric">  +0.01</td>
-                                        <td class="numeric">0.14%</td>
-                                        <td class="numeric">$3.70</td>
-                                        <td class="numeric">$3.72</td>
-                                        <td class="numeric">$3.68</td>
-                                        <td class="numeric">191,373</td>
-                                    </tr>
-                                    <tr>
-                                        <td>ADU</td>
-                                        <td>ADAMUS RESOURCES LIMITED</td>
-                                        <td class="numeric">$0.72</td>
-                                        <td class="numeric">0.00</td>
-                                        <td class="numeric">0.00%</td>
-                                        <td class="numeric">$0.73</td>
-                                        <td class="numeric">$0.74</td>
-                                        <td class="numeric">$0.72</td>
-                                        <td class="numeric">8,602,291</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AGG</td>
-                                        <td>ANGLOGOLD ASHANTI LIMITED</td>
-                                        <td class="numeric">$7.81</td>
-                                        <td class="numeric">-0.22</td>
-                                        <td class="numeric">-2.74%</td>
-                                        <td class="numeric">$7.82</td>
-                                        <td class="numeric">$7.82</td>
-                                        <td class="numeric">$7.81</td>
-                                        <td class="numeric">148</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AGK</td>
-                                        <td>AGL ENERGY LIMITED</td>
-                                        <td class="numeric">$13.82</td>
-                                        <td class="numeric">  +0.02</td>
-                                        <td class="numeric">0.14%</td>
-                                        <td class="numeric">$13.83</td>
-                                        <td class="numeric">$13.83</td>
-                                        <td class="numeric">$13.67</td>
-                                        <td class="numeric">846,403</td>
-                                    </tr>
-                                    <tr>
-                                        <td>AGO</td>
-                                        <td>ATLAS IRON LIMITED</td>
-                                        <td class="numeric">$3.17</td>
-                                        <td class="numeric">-0.02</td>
-                                        <td class="numeric">-0.47%</td>
-                                        <td class="numeric">$3.11</td>
-                                        <td class="numeric">$3.22</td>
-                                        <td class="numeric">$3.10</td>
-                                        <td class="numeric">5,416,303</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </section>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <section class="panel">
-                        <header class="panel-heading">
-                            No More Tables
-                        </header>
-                        <div class="panel-body">
-                            <section id="no-more-tables">
-                                <table class="table table-bordered table-striped table-condensed cf">
-                                    <thead class="cf">
-                                    <tr>
-                                        <th>Code</th>
-                                        <th>Company</th>
-                                        <th class="numeric">Price</th>
-                                        <th class="numeric">Change</th>
-                                        <th class="numeric">Change %</th>
-                                        <th class="numeric">Open</th>
-                                        <th class="numeric">High</th>
-                                        <th class="numeric">Low</th>
-                                        <th class="numeric">Volume</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td data-title="Code">AAC</td>
-                                        <td data-title="Company">AUSTRALIAN AGRICULTURAL COMPANY LIMITED.</td>
-                                        <td class="numeric" data-title="Price">$1.38</td>
-                                        <td class="numeric" data-title="Change">-0.01</td>
-                                        <td class="numeric" data-title="Change %">-0.36%</td>
-                                        <td class="numeric" data-title="Open">$1.39</td>
-                                        <td class="numeric" data-title="High">$1.39</td>
-                                        <td class="numeric" data-title="Low">$1.38</td>
-                                        <td class="numeric" data-title="Volume">9,395</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="Code">AAD</td>
-                                        <td data-title="Company">ARDENT LEISURE GROUP</td>
-                                        <td class="numeric" data-title="Price">$1.15</td>
-                                        <td class="numeric" data-title="Change">  +0.02</td>
-                                        <td class="numeric" data-title="Change %">1.32%</td>
-                                        <td class="numeric" data-title="Open">$1.14</td>
-                                        <td class="numeric" data-title="High">$1.15</td>
-                                        <td class="numeric" data-title="Low">$1.13</td>
-                                        <td class="numeric" data-title="Volume">56,431</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="Code">AAX</td>
-                                        <td data-title="Company">AUSENCO LIMITED</td>
-                                        <td class="numeric" data-title="Price">$4.00</td>
-                                        <td class="numeric" data-title="Change">-0.04</td>
-                                        <td class="numeric" data-title="Change %">-0.99%</td>
-                                        <td class="numeric" data-title="Open">$4.01</td>
-                                        <td class="numeric" data-title="High">$4.05</td>
-                                        <td class="numeric" data-title="Low">$4.00</td>
-                                        <td class="numeric" data-title="Volume">90,641</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="Code">ABC</td>
-                                        <td data-title="Company">ADELAIDE BRIGHTON LIMITED</td>
-                                        <td class="numeric" data-title="Price">$3.00</td>
-                                        <td class="numeric" data-title="Change">  +0.06</td>
-                                        <td class="numeric" data-title="Change %">2.04%</td>
-                                        <td class="numeric" data-title="Open">$2.98</td>
-                                        <td class="numeric" data-title="High">$3.00</td>
-                                        <td class="numeric" data-title="Low">$2.96</td>
-                                        <td class="numeric" data-title="Volume">862,518</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="Code">ABP</td>
-                                        <td data-title="Company">ABACUS PROPERTY GROUP</td>
-                                        <td class="numeric" data-title="Price">$1.91</td>
-                                        <td class="numeric" data-title="Change">0.00</td>
-                                        <td class="numeric" data-title="Change %">0.00%</td>
-                                        <td class="numeric" data-title="Open">$1.92</td>
-                                        <td class="numeric" data-title="High">$1.93</td>
-                                        <td class="numeric" data-title="Low">$1.90</td>
-                                        <td class="numeric" data-title="Volume">595,701</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="Code">ABY</td>
-                                        <td data-title="Company">ADITYA BIRLA MINERALS LIMITED</td>
-                                        <td class="numeric" data-title="Price">$0.77</td>
-                                        <td class="numeric" data-title="Change">  +0.02</td>
-                                        <td class="numeric" data-title="Change %">2.00%</td>
-                                        <td class="numeric" data-title="Open">$0.76</td>
-                                        <td class="numeric" data-title="High">$0.77</td>
-                                        <td class="numeric" data-title="Low">$0.76</td>
-                                        <td class="numeric" data-title="Volume">54,567</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="Code">ACR</td>
-                                        <td data-title="Company">ACRUX LIMITED</td>
-                                        <td class="numeric" data-title="Price">$3.71</td>
-                                        <td class="numeric" data-title="Change">  +0.01</td>
-                                        <td class="numeric" data-title="Change %">0.14%</td>
-                                        <td class="numeric" data-title="Open">$3.70</td>
-                                        <td class="numeric" data-title="High">$3.72</td>
-                                        <td class="numeric" data-title="Low">$3.68</td>
-                                        <td class="numeric" data-title="Volume">191,373</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="Code">ADU</td>
-                                        <td data-title="Company">ADAMUS RESOURCES LIMITED</td>
-                                        <td class="numeric" data-title="Price">$0.72</td>
-                                        <td class="numeric" data-title="Change">0.00</td>
-                                        <td class="numeric" data-title="Change %">0.00%</td>
-                                        <td class="numeric" data-title="Open">$0.73</td>
-                                        <td class="numeric" data-title="High">$0.74</td>
-                                        <td class="numeric" data-title="Low">$0.72</td>
-                                        <td class="numeric" data-title="Volume">8,602,291</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="Code">AGG</td>
-                                        <td data-title="Company">ANGLOGOLD ASHANTI LIMITED</td>
-                                        <td class="numeric" data-title="Price">$7.81</td>
-                                        <td class="numeric" data-title="Change">-0.22</td>
-                                        <td class="numeric" data-title="Change %">-2.74%</td>
-                                        <td class="numeric" data-title="Open">$7.82</td>
-                                        <td class="numeric" data-title="High">$7.82</td>
-                                        <td class="numeric" data-title="Low">$7.81</td>
-                                        <td class="numeric" data-title="Volume">148</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="Code">AGK</td>
-                                        <td data-title="Company">AGL ENERGY LIMITED</td>
-                                        <td class="numeric" data-title="Price">$13.82</td>
-                                        <td class="numeric" data-title="Change">  +0.02</td>
-                                        <td class="numeric" data-title="Change %">0.14%</td>
-                                        <td class="numeric" data-title="Open">$13.83</td>
-                                        <td class="numeric" data-title="High">$13.83</td>
-                                        <td class="numeric" data-title="Low">$13.67</td>
-                                        <td class="numeric" data-title="Volume">846,403</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-title="Code">AGO</td>
-                                        <td data-title="Company">ATLAS IRON LIMITED</td>
-                                        <td class="numeric" data-title="Price">$3.17</td>
-                                        <td class="numeric" data-title="Change">-0.02</td>
-                                        <td class="numeric" data-title="Change %">-0.47%</td>
-                                        <td class="numeric" data-title="Open">$3.11</td>
-                                        <td class="numeric" data-title="High">$3.22</td>
-                                        <td class="numeric" data-title="Low">$3.10</td>
-                                        <td class="numeric" data-title="Volume">5,416,303</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </section>
-                        </div>
-                    </section>
-                </div>
-            </div>
+            </section>
             <!-- page end-->
         </section>
     </section>
+    <div class="modal fade modal-dialog-center " id="myModal4" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content-wrap">
+                <div class="modal-content">
+                    <form class="form-horizontal" action="{{ route('insertProvider') }}" method="POST" role="form">
+                        {{csrf_field()}}
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+                            </button>
+                            <h4 class="modal-title">Insert Provider New</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label class="col-lg-3 col-sm-3 control-label">Name</label>
+                                <div class="col-lg-9">
+                                    <div class="iconic-input right">
+                                        <i class="fa fa-users"></i>
+                                        <input type="text" class="form-control" placeholder="Full name" value="{{old('name')}}" name="name"
+                                               id="name" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 col-sm-3 control-label">Address</label>
+                                <div class="col-lg-9">
+                                    <textarea name="address" class="form-control" required>{{old('address')}}</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 col-sm-3 control-label">Phone</label>
+                                <div class="col-lg-9">
+                                    <div class="iconic-input right">
+                                        <i class="fa fa-phone"></i>
+                                        <input type="number" class="form-control" value="{{ old('phone') }}" name="phone" id="phone"
+                                               placeholder="Phone" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+                            <button class="btn btn-warning" type="submit"> Confirm</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ asset('js/jquery-ui-1.9.2.custom.min.js') }}"></script>
+    <script src="{{ asset('js/jquery-migrate-1.2.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/data-tables/jquery.dataTables.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/data-tables/DT_bootstrap.js') }}"></script>
+    <script src="{{ asset('js/editable-table.js') }}"></script>
+    <script>
+        jQuery(document).ready(function () {
+            EditableTable.init();
+        });
+    </script>
 @endsection

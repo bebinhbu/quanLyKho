@@ -74,7 +74,7 @@
                                         </td>
                                         <td class="center"><input type="email" class="email_emp"
                                                                   value="{{ $value->email }}"></td>
-                                        <td class="center"><input type="number" class="phone_emp"
+                                        <td class="center"><input type="string" class="phone_emp"
                                                                   value="{{ $value->phone }}"></td>
                                         <td>
                                             <a class="btn btn-sm btn-info btnEditEmp"

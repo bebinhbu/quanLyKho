@@ -151,7 +151,7 @@
                     </a>
                     <ul class="sub">
                         <li><a  href="{{ route('showAllEmployee') }}">Employees</a></li>
-                        <li><a  href="horizontal_menu.html">Horizontal Menu</a></li>
+                        <li><a  href="{{ route('showAllProvider') }}">Providers</a></li>
                         <li><a  href="header-color.html">Different Color Top bar</a></li>
                         <li><a  href="mega_menu.html">Mega Menu</a></li>
                         <li><a  href="language_switch_bar.html">Language Switch Bar</a></li>

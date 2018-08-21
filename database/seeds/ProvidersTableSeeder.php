@@ -17,7 +17,7 @@ class ProvidersTableSeeder extends Seeder
             DB::table('providers')->insert([
                 'name' => $faker->company,
                 'address' => $faker->address,
-                'phone' => $faker->phoneNumber,
+                'phone' => $faker->e164PhoneNumber,
                 'active_flg' => '1'
             ]);
         }
