@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateExportsTable extends Migration
+class CreateProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class CreateExportsTable extends Migration
      */
     public function up()
     {
-        Schema::create('exports', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->date('date');
-            $table->integer('employee_id');
-            $table->integer('customer_id');
-            $table->integer('active_flg')->nullable();
-            $table->integer('created_by')->nullable();
-            $table->integer('updated_by')->nullable();
+            $table->string('name');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -33,6 +28,6 @@ class CreateExportsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('exports');
+        Schema::dropIfExists('products');
     }
 }

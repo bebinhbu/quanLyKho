@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEmployeesTable extends Migration
+class CreateBallotsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,11 @@ class CreateEmployeesTable extends Migration
      */
     public function up()
     {
-        Schema::create('employees', function (Blueprint $table) {
+        Schema::create('ballots', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->integer('sex');
-            $table->string('email')->unique();
-            $table->integer('active_flg');
-            $table->string('phone');
-            $table->integer('created_by')->nullable();
-            $table->integer('updated_by')->nullable();
+            $table->integer('id_customer');
+            $table->integer('id_nhanvien');
+            $table->date('date');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -34,6 +30,6 @@ class CreateEmployeesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('employees');
+        Schema::dropIfExists('ballots');
     }
 }
