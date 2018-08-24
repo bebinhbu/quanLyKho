@@ -96,7 +96,7 @@
             <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
         </div>
         <!--logo start-->
-        <a href="index.html" class="logo">Manager<span> Warehouse</span></a>
+        <a href="{{ route('home') }}" class="logo">Manager<span> Warehouse</span></a>
         <!--logo end-->
         <div class="top-nav ">
             <!--search & user info start-->
@@ -145,14 +145,14 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
                 <li class="sub-menu">
-                    <a href="javascript:;" >
+                    <a href="javascript:void(0)" >
                         <i class="fa fa-laptop"></i>
                         <span>Manager</span>
                     </a>
                     <ul class="sub">
-                        <li><a  href="{{ route('showAllEmployee') }}">Employees</a></li>
-                        <li><a  href="{{ route('showAllProvider') }}">Providers</a></li>
-                        <li><a  href="{{ route('showAllCustomer') }}">Customers</a></li>
+                        <li><a>Employees</a></li>
+                        <li><a>Providers</a></li>
+                        <li><a>Customers</a></li>
                     </ul>
                 </li>
             </ul>

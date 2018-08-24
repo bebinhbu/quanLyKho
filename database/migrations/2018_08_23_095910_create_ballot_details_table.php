@@ -24,6 +24,7 @@ class CreateBallotDetailsTable extends Migration
             $table->integer('total_price');
             $table->integer('price_paid');
             $table->boolean('isWholeSale');
+            $table->integer('active_flg');
             $table->softDeletes();
             $table->timestamps();
         });

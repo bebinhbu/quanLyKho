@@ -18,10 +18,11 @@ class CreateCustomersTable extends Migration
             $table->string('name');
             $table->string('address');
             $table->string('phone');
-            $table->integer('amount_debt');
-            $table->integer('price_debt');
-            $table->integer('price');
+            $table->integer('amount_debt')->nullable();
+            $table->integer('price_debt')->nullable();
+            $table->integer('price')->nullable();
             $table->boolean('isStore');
+            $table->integer('active_flg');
             $table->unique('name');
             $table->softDeletes();
             $table->timestamps();

@@ -18,6 +18,7 @@ class CreateBallotsTable extends Migration
             $table->integer('id_customer');
             $table->integer('id_nhanvien');
             $table->date('date');
+            $table->integer('active_flg');
             $table->softDeletes();
             $table->timestamps();
         });
